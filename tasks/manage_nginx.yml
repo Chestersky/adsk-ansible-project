@@ -1,0 +1,20 @@
+---
+- yum:
+    name: "{{epel_url}}"
+    state: present
+- yum:
+    name: nginx
+    state: present
+- copy:
+    src: "{{nginx_path}}"
+    dest: "{{nginx_remote_path}}"
+- service:
+    name: "nginx"
+    state: restarted
+- yum:
+    name: python2-certbot-nginx
+    state: present
+- shell: sudo certbot -i nginx -n -d "adsk-final.tk" --nginx -m "tomasz.szkrdk@gmail.com" --agree-tos --redirect
+- service:
+    name: "nginx"
+    state: restarted

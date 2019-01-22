@@ -1,0 +1,34 @@
+# packages
+influxdb_url: https://dl.influxdata.com/influxdb/releases/influxdb-1.7.1.x86_64.rpm
+grafana_url: https://dl.grafana.com/oss/release/grafana-5.4.3-1.x86_64.rpm
+telegraf_url: https://dl.influxdata.com/telegraf/releases/telegraf-1.8.3-1.x86_64.rpm
+epel_url: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+#stats ip
+influxdb_ip: 18.195.153.19
+grafana_ip: 18.195.153.19
+
+# user
+user: user
+
+# carrental
+carrental_service: carrental/car_rental.service
+carrental_service_remote: /etc/systemd/system/carrental.service
+car_rental_jar: carrental/car_rental.jar
+car_rental_jar_remote: /opt/carrental/carrental.jar
+
+# telegraf
+telegraf_conf: templates/telegraf.conf
+telegraf_remote_conf: /etc/telegraf/telegraf.conf
+
+# grafana
+grafana_path: templates/grafana.ini
+grafana_remote_path: /etc/grafana/grafana.ini
+
+# nginx
+nginx_path: templates/nginx.conf
+nginx_remote_path: /etc/nginx/conf.d/nginx.conf
+
+# app servers private ip's
+app1: 172.31.30.196
+app2: 172.31.20.141
